@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Payment - Ramen Jin Houston">
+    <title>Secure Payment | Ramen Jin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/payment.css">
+  <link rel="stylesheet" href="../assets/css/cart-widget.css">
+    <link rel="stylesheet" href="../assets/css/ux-enhancements.css">
+    <link rel="stylesheet" href="../assets/css/visual-polish.css">
+    <link rel="stylesheet" href="../assets/css/site-fixes.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href="/">Ramen Jin</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/menu.html">Menu</a></li>
+                <li><a href="/pages/order.html">Order Online</a></li>
+                <li><a href="/pages/location.html">Location</a></li>
+                <li><a href="#" id="nav-cart-link" class="nav-cart-tab" onclick="event.preventDefault(); if(typeof CartWidget!=='undefined') CartWidget.toggle();">Cart <span id="nav-cart-badge" class="nav-cart-badge"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="payment-page">
+            <h2 class="section-title">Secure Checkout</h2>
+
+            <!-- Order Summary -->
+            <div class="payment-layout">
+                <div class="order-summary-panel">
+                    <h3>Order Summary</h3>
+                    <div id="cart-items-list" class="cart-items-list"></div>
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax (8.25%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="total-row" id="tip-row" style="display:none;">
+                            <span>Tip:</span>
+                            <span id="tip-amount">$0.00</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Tip Selection -->
+                    <div class="tip-section">
+                        <h4>Add a Tip</h4>
+                        <div class="tip-options">
+                            <button class="tip-btn" data-tip="0">No Tip</button>
+                            <button class="tip-btn" data-tip="15">15%</button>
+                            <button class="tip-btn active" data-tip="18">18%</button>
+                            <button class="tip-btn" data-tip="20">20%</button>
+                            <button class="tip-btn" data-tip="25">25%</button>
+                            <button class="tip-btn" data-tip="custom">Custom</button>
+                        </div>
+                        <div id="custom-tip-input" class="custom-tip" style="display:none;">
+                            <label for="custom-tip-amount">Custom tip amount:</label>
+                            <input type="number" id="custom-tip-amount" min="0" step="0.01" placeholder="$0.00">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Panel -->
+                <div class="payment-methods-panel">
+                    <h3>Payment Method</h3>
+                    <!-- Credit/Debit Card Payment (Stripe Elements) -->
+                    <div id="card-payment-section" class="payment-section active">
+                        <div class="stripe-elements-container">
+                            <div class="form-group">
+                                <label for="cardholder-name">Cardholder Name</label>
+                                <input type="text" id="cardholder-name" placeholder="Full name on card" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardholder-email">Email (for receipt)</label>
+                                <input type="email" id="cardholder-email" placeholder="email@example.com" required>
+                            </div>
+                            <!-- Stripe Elements Card Input -->
+                            <div class="form-group">
+                                <label for="card-element">Credit or Debit Card</label>
+                                <div id="card-element" class="payment-input" style="padding: 12px; border: 1px solid #ccc; border-radius: 6px; background: #fff;"></div>
+                            </div>
+                            <div id="card-errors" class="element-errors" role="alert"></div>
+                        <button id="btn-pay-card" class="btn-pay" type="button">
+                            <span class="btn-pay-text">Pay Now</span>
+                            <span class="btn-pay-loading" style="display:none;">Processing...</span>
+                        </button>
+                    </div>
+                    <!-- Error/Success Messages -->
+                    <div id="payment-error" class="payment-message error" style="display:none;"></div>
+                    <div id="payment-success" class="payment-message success" style="display:none;"></div>
+
+                    <!-- Security Badge -->
+                    <div class="security-badge">
+                        <span>&#128274;</span> Payments are secured with 256-bit SSL encryption.
+                        <br>Card data is handled securely by Stripe. We never store your card details.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ramen Jin Flavors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Payment Integration Scripts (order matters) -->
+    <script src="../payment/payment-config.js"></script>
+    <script src="../payment/stripe-elements.js"></script>
+    <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/cart-widget.js"></script>
+    <!-- Firebase Firestore Integration -->
+    <script src="../firebase/firebase-config.js"></script>
+    <script src="../firebase/firestore-service.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Stripe with the publishable key from payment-config
+        var stripePublishableKey = (typeof PaymentConfig !== 'undefined' && PaymentConfig.publishableKey)
+            ? PaymentConfig.publishableKey
+            : 'pk_test_51TOIV4JwuGici0VYNUMjcPVEAw9eWIHzddOAkdtJ1TUKZdaQIHk6qR3KPplV9tQ9YwzfOxRnUFiuUAU07ggcnAJ900qgXy3XKw';
+
+        var stripe = Stripe(stripePublishableKey);
+        var elements = stripe.elements();
+
+        // Create and mount the Card Element
+        var style = {
+            base: {
+                color: '#32325d',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': { color: '#aab7c4' }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+        var cardElement = elements.create('card', { style: style });
+        cardElement.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element
+        cardElement.on('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Handle form submission
+        var payBtn = document.getElementById('btn-pay-card');
+        if (payBtn) {
+            payBtn.addEventListener('click', async function(e) {
+                e.preventDefault();
+                var btnText = payBtn.querySelector('.btn-pay-text');
+                var btnLoading = payBtn.querySelector('.btn-pay-loading');
+                var errorDiv = document.getElementById('payment-error');
+                var successDiv = document.getElementById('payment-success');
+
+                // Get cardholder info
+                var name = document.getElementById('cardholder-name').value.trim();
+                var email = document.getElementById('cardholder-email').value.trim();
+
+                if (!name || !email) {
+                    errorDiv.textContent = 'Please fill in your name and email.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+
+                // Disable button and show loading
+                payBtn.disabled = true;
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline';
+                errorDiv.style.display = 'none';
+                successDiv.style.display = 'none';
+
+                try {
+                    // Get total amount from the page
+                    var totalEl = document.getElementById('total');
+                    var totalText = totalEl ? totalEl.textContent.replace(/[^0-9.]/g, '') : '0';
+                    var amountInCents = Math.round(parseFloat(totalText) * 100);
+
+                    if (!amountInCents || amountInCents < 100) {
+                        throw new Error('Invalid order amount. Please add items to your cart.');
+                    }
+
+                    // Create payment intent via Netlify function
+                    var response = await fetch('/api/payment/create-intent', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            amount: amountInCents,
+                            currency: 'usd',
+                            metadata: { customer_name: name, customer_email: email }
+                        })
+                    });
+
+                    var data = await response.json();
+                    if (!response.ok) {
+                        throw new Error(data.error || 'Failed to create payment intent.');
+                    }
+
+                    // Confirm card payment with Stripe
+                    var result = await stripe.confirmCardPayment(data.clientSecret, {
+                        payment_method: {
+                            card: cardElement,
+                            billing_details: { name: name, email: email }
+                        }
+                    });
+
+                    if (result.error) {
+                        throw new Error(result.error.message);
+                    }
+
+                    if (result.paymentIntent.status === 'succeeded') {
+                        successDiv.textContent = 'Payment successful! Saving order...';
+                        successDiv.style.display = 'block';
+
+                        // Get cart items from localStorage
+                        var cartItems = [];
+                        try {
+                            cartItems = JSON.parse(localStorage.getItem('ramenJinCart') || '[]');
+                        } catch(e) { console.warn('Could not parse cart'); }
+
+                        var subtotalEl = document.getElementById('subtotal');
+                        var taxEl = document.getElementById('tax');
+                        var subtotalVal = subtotalEl ? parseFloat(subtotalEl.textContent.replace(/[^0-9.]/g, '')) || 0 : 0;
+                        var taxVal = taxEl ? parseFloat(taxEl.textContent.replace(/[^0-9.]/g, '')) || 0 : 0;
+                        var totalVal = parseFloat(totalText) || 0;
+
+                        // Save order to Firestore
+                        var savedOrder = null;
+                        try {
+                            if (typeof FirestoreService !== 'undefined') {
+                                savedOrder = await FirestoreService.saveOrder({
+                                    items: cartItems,
+                                    subtotal: subtotalVal,
+                                    tax: taxVal,
+                                    total: totalVal,
+                                    paymentIntentId: result.paymentIntent.id,
+                                    customer: {
+                                        name: name,
+                                        email: email
+                                    },
+                                    orderType: 'online'
+                                });
+
+                                // Save payment record
+                                await FirestoreService.savePaymentRecord({
+                                    paymentIntentId: result.paymentIntent.id,
+                                    orderId: savedOrder.id,
+                                    amount: totalVal,
+                                    currency: 'usd',
+                                    status: 'succeeded'
+                                });
+
+                                // Save receipt
+                                await FirestoreService.saveReceipt({
+                                    orderNumber: savedOrder.orderNumber,
+                                    orderId: savedOrder.id,
+                                    items: cartItems,
+                                    subtotal: subtotalVal,
+                                    tax: taxVal,
+                                    total: totalVal,
+                                    paymentMethod: 'card',
+                                    customerEmail: email
+                                });
+
+                                console.log('Order saved to Firestore:', savedOrder.orderNumber);
+                                successDiv.textContent = 'Payment successful! Order ' + savedOrder.orderNumber + ' confirmed.';
+                            }
+                        } catch (firestoreErr) {
+                            console.error('Firestore save error (payment still succeeded):', firestoreErr);
+                        }
+
+                        // Store payment info for receipt page (keep sessionStorage as fallback)
+                        sessionStorage.setItem('paymentSuccess', JSON.stringify({
+                            paymentIntentId: result.paymentIntent.id,
+                            amount: result.paymentIntent.amount,
+                            currency: result.paymentIntent.currency,
+                            customerName: name,
+                            customerEmail: email,
+                            orderNumber: savedOrder ? savedOrder.orderNumber : null,
+                            orderId: savedOrder ? savedOrder.id : null
+                        }));
+
+                        // Clear cart after successful order
+                        localStorage.removeItem('ramenJinCart');
+
+                        setTimeout(function() {
+                            window.location.href = '/pages/receipt.html';
+                        }, 2000);
+                    }
+                } catch (err) {
+                    errorDiv.textContent = err.message || 'Payment failed. Please try again.';
+                    errorDiv.style.display = 'block';
+                    payBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

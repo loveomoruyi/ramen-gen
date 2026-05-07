@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>`n    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order Online - Ramen Jin Houston">
+    <title>Order Online | Ramen Jin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/cart-widget.css">
+    <link rel="stylesheet" href="../assets/css/ux-enhancements.css">
+    <link rel="stylesheet" href="../assets/css/visual-polish.css">
+    <link rel="stylesheet" href="../assets/css/site-fixes.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href='/'>Ramen Jin</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href='/'>Home</a></li>
+                <li><a href='/pages/menu.html'>Menu</a></li>
+                <li><a class='active' href='/pages/order.html'>Order Online</a></li>
+                <li><a href='/pages/location.html'>Location</a></li>
+                <li><a href='/#about-preview'>Our Story</a></li>
+                <li><a href='/pages/admin.html'>Sales Dashboard</a></li>
+                <li><a href='/pages/payment.html'>Payment</a></li>
+                <li><a href='/pages/admin.html'>Receipts</a></li>
+                <li><a href='#' id='nav-cart-link' class='nav-cart-tab' onclick='event.preventDefault(); if(typeof CartWidget!=="undefined") CartWidget.toggle();'>Cart <span id='nav-cart-badge' class='nav-cart-badge'></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section id="order-system">
+            <h2>Online Ordering System</h2>
+            <p>Order your favorite ramen for pickup or delivery!</p>
+
+            <div class="order-container">
+                <!-- Order Type Selection -->
+                <div class="order-type">
+                    <h3>Select Order Type</h3>
+                    <button class="btn-primary" id="btn-pickup">Pickup</button>
+                    <button class="btn-secondary" id="btn-delivery">Delivery</button>
+                </div>
+
+                        <!-- Delivery Address Section -->
+                        <div id="delivery-address-section" class="delivery-address-section">
+                            <h3>Delivery Address</h3>
+                            <div class="address-form">
+                                <div class="form-group">
+                                    <label for="delivery-street">Street Address</label>
+                                    <input type="text" id="delivery-street" class="address-input" placeholder="123 Main Street">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="delivery-city">City</label>
+                                        <input type="text" id="delivery-city" class="address-input" placeholder="Houston">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="delivery-zip">ZIP Code</label>
+                                        <input type="text" id="delivery-zip" class="address-input" placeholder="77001">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="delivery-notes">Delivery Notes (optional)</label>
+                                    <textarea id="delivery-notes" class="address-input" rows="2" placeholder="Apartment number, gate code, etc."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                <!-- Restaurant Selection -->
+                <div class="restaurant-select">
+                    <h3>Select Restaurant</h3>
+                    <div class="restaurant-options">
+                        <label>
+                            <input type="radio" name="restaurant" value="ramen-jin" checked>
+                            Ramen Jin (Left Side)
+                        </label>
+                        <label>
+                            <input type="radio" name="restaurant" value="banh-mi">
+                            My Boss Banh Mi (Right Side)
+                        </label>
+                    </div>
+                </div>
+
+
+            <!-- Browse Menu Section -->
+            <div class="order-menu">
+                <h3>Select Items</h3>
+                <p class="browse-menu-description">Browse our complete menu to select your items. Choose from our full range of authentic ramen, sides, and drinks.</p>
+                <a href="/pages/menu.html?order=true" class="btn-primary browse-menu-btn" id="browse-menu-btn">
+                    <span class="browse-menu-icon">&#127836;</span> Browse Our Full Menu
+                </a>
+                <div id="selected-items-container" class="selected-items-container">
+                    <h4 id="selected-items-heading" style="display:none;">Your Selected Items</h4>
+                    <div id="cart-items-list" class="cart-items-list"></div>
+                </div>
+            </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="summary-items"></div>
+                    <div class="order-total">
+                        <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                        <p>Tax (8.25%): <span id="tax">$0.00</span></p>
+                        <p><strong>Total: <span id="total">$0.00</span></strong></p>
+                    </div>
+                    <button class="btn-primary" id="btn-checkout">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ramen Jin. All Rights Reserved. Owner: Brian Chen</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/cart-widget.js"></script>
+</body>
+</html>
+

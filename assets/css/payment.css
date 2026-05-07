@@ -1,0 +1,685 @@
+/**
+* Ramen Jin Flavors - Payment Styles
+* Styling for Stripe Elements, and payment forms
+* PCI DSS SAQ A Compliant - No sensitive data in CSS
+*
+* Color Palette:
+* - Primary: #D4451A (Ramen Jin signature red-orange)
+* - Background: #1a1a2e (Dark navy)
+* - Surface: #16213e (Card/input backgrounds)
+* - Text: #ffffff / #cccccc
+* - Success: #00c853
+* - Error: #ff4444
+* - Warning: #ffab00
+*/
+
+/* ============================================
+PAYMENT PAGE LAYOUT
+============================================ */
+.payment-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #0f0f23;
+  min-height: 100vh;
+}
+
+.payment-page h1,
+.payment-page h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.payment-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-page h2 {
+  font-size: 1.25rem;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+ORDER SUMMARY
+============================================ */
+.order-summary {
+  background: #16213e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #2a2a4a;
+}
+
+.order-summary h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #D4451A;
+  border-bottom: 1px solid #2a2a4a;
+  padding-bottom: 0.75rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.order-item .item-name {
+  color: #cccccc;
+}
+
+.order-item .item-price {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.order-divider {
+  border: none;
+  border-top: 1px solid #2a2a4a;
+  margin: 0.75rem 0;
+}
+
+.order-subtotal,
+.order-tax,
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+}
+
+.order-subtotal,
+.order-tax {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.order-tax .tax-rate {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.order-total {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #D4451A;
+  padding-top: 0.75rem;
+  border-top: 2px solid #D4451A;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+PAYMENT METHOD TABS
+============================================ */
+.payment-method-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2a2a4a;
+}
+
+.payment-tab {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  background: #16213e;
+  color: #999;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.payment-tab:not(:last-child) {
+  border-right: 1px solid #2a2a4a;
+}
+
+.payment-tab:hover {
+  background: #1e2d50;
+  color: #cccccc;
+}
+
+.payment-tab.active {
+  background: #D4451A;
+  color: #ffffff;
+}
+
+.payment-tab .tab-icon {
+  font-size: 1.1rem;
+}
+
+.payment-tab-content {
+  display: none;
+}
+
+.payment-tab-content.active {
+  display: block;
+}
+
+/* ============================================
+STRIPE ELEMENTS CONTAINER
+============================================ */
+.stripe-payment-section {
+  background: #16213e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #2a2a4a;
+  margin-bottom: 1.5rem;
+}
+
+.stripe-payment-section h3 {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stripe-payment-section h3 .lock-icon {
+  color: #00c853;
+  font-size: 0.9rem;
+}
+
+/* Stripe Elements hosted iframe container */
+#stripe-card-element,
+#stripe-payment-element,
+.stripe-element-container {
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px 12px;
+  min-height: 44px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#stripe-card-element:hover,
+#stripe-payment-element:hover,
+.stripe-element-container:hover {
+  border-color: #555;
+}
+
+#stripe-card-element.StripeElement--focus,
+#stripe-payment-element.StripeElement--focus,
+.stripe-element-container.StripeElement--focus {
+  border-color: #D4451A;
+  box-shadow: 0 0 0 3px rgba(212, 69, 26, 0.2);
+  outline: none;
+}
+
+#stripe-card-element.StripeElement--invalid,
+.stripe-element-container.StripeElement--invalid {
+  border-color: #ff4444;
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.15);
+}
+
+#stripe-card-element.StripeElement--complete,
+.stripe-element-container.StripeElement--complete {
+  border-color: #00c853;
+}
+
+.stripe-element-ready {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Stripe Element loading state */
+.stripe-element-loading {
+  position: relative;
+  min-height: 44px;
+}
+
+.stripe-element-loading::after {
+  content: 'Loading secure payment form...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+BILLING DETAILS FORM
+============================================ */
+.billing-details {
+  margin-bottom: 1.5rem;
+}
+
+.billing-details h4 {
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-row-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  color: #cccccc;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #D4451A;
+  box-shadow: 0 0 0 3px rgba(212, 69, 26, 0.2);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+.form-input.error {
+  border-color: #ff4444;
+}
+
+/* ============================================
+============================================ */
+
+/* ============================================
+PAYMENT SUBMIT BUTTON
+============================================ */
+#payment-submit-btn,
+#submit-payment,
+.payment-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #D4451A 0%, #e85d35 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
+#payment-submit-btn:hover,
+#submit-payment:hover,
+.payment-submit-btn:hover {
+  background: linear-gradient(135deg, #e85d35 0%, #f06b45 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 69, 26, 0.4);
+}
+
+#payment-submit-btn:active,
+#submit-payment:active,
+.payment-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(212, 69, 26, 0.3);
+}
+
+#payment-submit-btn:disabled,
+#submit-payment:disabled,
+.payment-submit-btn:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============================================
+PAYMENT SPINNER / LOADING
+============================================ */
+#payment-spinner,
+.payment-spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 35, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.processing-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.processing-overlay .spinner-large {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(212, 69, 26, 0.3);
+  border-top-color: #D4451A;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.processing-overlay p {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+/* ============================================
+ERROR / SUCCESS STATES
+============================================ */
+
+#payment-error::before,
+.payment-error::before {
+  content: 'A0';
+  flex-shrink: 0;
+}
+
+#payment-success,
+#stripe-success-message,
+.payment-success {
+  display: none;
+  background: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.payment-success .success-icon {
+  font-size: 3rem;
+  color: #00c853;
+  margin-bottom: 0.75rem;
+}
+
+.payment-success p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-success .payment-id {
+  color: #999;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+}
+
+/* Warning message */
+.payment-warning {
+  background: rgba(255, 171, 0, 0.1);
+  border: 1px solid rgba(255, 171, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffab00;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ============================================
+SECURITY BADGE
+============================================ */
+.security-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.security-badge .lock-icon {
+  color: #00c853;
+}
+
+.security-badge a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.powered-by-stripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.75rem;
+}
+
+/* ============================================
+RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 768px) {
+  .payment-page {
+    padding: 1.25rem 1rem;
+  }
+
+  .payment-page h1 {
+    font-size: 1.4rem;
+  }
+
+  .payment-page h2 {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .order-summary {
+    padding: 1.25rem;
+  }
+
+  .stripe-payment-section,
+
+  .form-row-double {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  #payment-submit-btn,
+  #submit-payment,
+  .payment-submit-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .payment-method-tabs {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .payment-tab:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #2a2a4a;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .order-summary,
+  .stripe-payment-section,
+
+  .order-total {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+ACCESSIBILITY
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible styles for keyboard navigation */
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .payment-tab.active {
+    border: 2px solid ButtonText;
+  }
+
+  #stripe-card-element,
+  #stripe-payment-element,
+  .stripe-element-container {
+    border: 1px solid ButtonText;
+  }
+}
+
+/* ============================================
+PRINT STYLES (for receipts)
+============================================ */
+@media print {
+  .payment-method-tabs,
+  .stripe-payment-section,
+  #payment-submit-btn,
+  #submit-payment,
+  .security-badge,
+  .powered-by-stripe {
+    display: none !important;
+  }
+
+  .payment-page {
+    background: white;
+    color: black;
+  }
+
+  .order-summary {
+    background: white;
+    border: 1px solid #ccc;
+    color: black;
+  }
+
+  .order-item .item-name,
+  .order-item .item-price {
+    color: black;
+  }
+
+  .payment-success {
+    background: white;
+    border: 2px solid green;
+    color: black;
+  }
+}
+
+/* Card Payment Form Styling */
+.card-detail-row {
+    display: flex;
+    gap: 16px;
+}
+.form-group-half {
+    flex: 1;
+}
+.payment-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+.payment-input:focus {
+    outline: none;
+    border-color: #d4a24e;
+    box-shadow: 0 0 0 3px rgba(212, 162, 78, 0.15);
+    background: #fff;
+}
+.payment-input::placeholder {
+    color: #aaa;
+}
+#card-number {
+    letter-spacing: 1.5px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Bank Research Notice */
+
+.btn-switch-to-card {
+    background: linear-gradient(135deg, #d4a24e, #c4872e);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-switch-to-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 162, 78, 0.3);
+}
+.payment-tab-disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}

@@ -1,0 +1,7 @@
+node_modules
+.git
+server
+Preparing
+Ready
+*.bak
+.DS_Store

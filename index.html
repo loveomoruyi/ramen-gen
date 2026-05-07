@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ramen Jin - Authentic Japanese Ramen Restaurant in Houston, TX. Owner: Brian Chen">
+    <meta name="author" content="Brian Chen">
+    <title>Ramen Jin | Authentic Ramen - Houston, TX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/ramen-jin-logo.svg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/cart-widget.css">
+    <link rel="stylesheet" href="assets/css/ux-enhancements.css">
+    <link rel="stylesheet" href="assets/css/visual-polish.css">
+    <link rel="stylesheet" href="assets/css/site-fixes.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/ramen-jin-logo.svg" alt="Ramen Jin Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Ramen Jin</h1>
+                    <span class="tagline">Authentic Japanese Ramen</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a class='active' href='/'>Home</a></li>
+                <li><a href='/pages/menu.html'>Menu</a></li>
+                <li><a href='/pages/order.html'>Order Online</a></li>
+                <li><a href='/pages/location.html'>Location</a></li>
+                <li><a href='#about-preview'>Our Story</a></li>
+                <li><a href='/pages/admin.html'>Sales Dashboard</a></li>
+                <li><a href='/pages/payment.html'>Payment</a></li>
+                <li><a href='/pages/admin.html'>Receipts</a></li>
+                <li><a href="#" id="nav-cart-link" class="nav-cart-tab" onclick="event.preventDefault(); if(typeof CartWidget!=='undefined') CartWidget.toggle();">Cart <span id="nav-cart-badge" class="nav-cart-badge"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+    <video id="hero-video-a" class="hero-video active-video" autoplay muted playsinline preload="auto">
+        <source src="assets/videos/hero-ramen.mp4" type="video/mp4">
+    </video>
+    <video id="hero-video-b" class="hero-video" muted playsinline preload="auto">
+    </video>
+        <div class="hero-content">
+            <h2>Welcome to Ramen Jin</h2>
+            <p>Experience the finest authentic Japanese ramen in Houston, Texas</p>
+            <p>A split venue on Wilcrest Street: Ramen Jin on the left | My Boss Banh Mi on the right</p>
+            <p>Owner: Brian Chen</p>
+            <a class='btn-primary' href='/pages/order.html'>Order Now</a>
+            <a class='btn-secondary' href='/pages/menu.html'>View Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured">
+        <h2>Why Choose Ramen Jin?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Authentic Recipes</h3>
+                <p>Traditional Japanese ramen crafted with care and passion by our expert chefs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fresh Ingredients</h3>
+                <p>We use only the freshest, locally sourced ingredients for every bowl.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Online Ordering</h3>
+                <p>Order your favorite ramen online for pickup or delivery.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Split Venue</h3>
+                <p>Two amazing restaurants in one location – Ramen Jin and My Boss Banh Mi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about-preview">
+        <h2>Our Story</h2>
+        <p>Founded by Brian Chen, Ramen Jin brings the authentic taste of Japanese ramen to Wilcrest Street, Houston. Our unique split venue shares space with My Boss Banh Mi, offering customers a diverse culinary experience.</p>
+        <div id="our-story-expanded" style="display:none; margin-top: 1rem;">
+            <p>Brian Chen's passion for authentic Japanese cuisine led him to create Ramen Jin, a restaurant that honors traditional ramen-making techniques while embracing the vibrant food culture of Houston, Texas.</p>
+            <p style="margin-top: 0.8rem;">Located on Wilcrest Street, our unique split venue concept pairs Ramen Jin with My Boss Banh Mi, giving customers the best of both Japanese and Vietnamese culinary traditions under one roof. On the left side, you'll find Ramen Jin serving rich, flavorful bowls of ramen made from scratch daily. On the right, My Boss Banh Mi offers fresh, authentic Vietnamese sandwiches and more.</p>
+            <p style="margin-top: 0.8rem;">Every bowl at Ramen Jin starts with a carefully prepared broth, simmered for hours to achieve the perfect depth of flavor. We source the freshest ingredients locally and stay true to the recipes that have made Japanese ramen beloved worldwide.</p>
+            <p style="margin-top: 0.8rem;">Whether you're a ramen enthusiast or trying it for the first time, we invite you to experience the warmth, flavor, and hospitality that define Ramen Jin. Come visit us and taste the difference that passion makes.</p>
+        </div>
+        <a class='btn-secondary' href='javascript:void(0)' id="story-toggle-btn" onclick="toggleStory()">Read More</a>
+    </section>
+
+    <!-- Location Preview -->
+    <section id="location-preview">
+        <h2>Find Us</h2>
+        <p>Wilcrest Street, Houston, TX</p>
+        <p>Split Venue: Ramen Jin (Left Side) | My Boss Banh Mi (Right Side)</p>
+        <a class='btn-secondary' href='/pages/location.html'>Get Directions</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ramen Jin</h3>
+                <p>Authentic Japanese Ramen</p>
+                <p>Owner: Brian Chen</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/pages/menu.html'>Menu</a></li>
+                    <li><a href='/pages/order.html'>Order Online</a></li>
+                    <li><a href='/pages/location.html'>Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Wilcrest Street, Houston, TX</p>
+                <p>Email: info@ramenjin.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ramen Jin. All Rights Reserved. Owner: Brian Chen</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        function toggleStory() {
+            var expanded = document.getElementById('our-story-expanded');
+            var btn = document.getElementById('story-toggle-btn');
+            if (expanded.style.display === 'none') {
+                expanded.style.display = 'block';
+                btn.textContent = 'Read Less';
+            } else {
+                expanded.style.display = 'none';
+                btn.textContent = 'Read More';
+            }
+        }
+    </script>
+<script src="video-sequencer.js"></script>
+  <script src="./assets/js/cart-widget.js"></script>
+</body>
+</html>

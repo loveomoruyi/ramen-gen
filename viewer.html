@@ -1,0 +1,1304 @@
+<html><head><title>File Viewer</title></head><body>
+<h2>menu.html (304 lines)</h2>
+<textarea id="menu.html" rows="10" cols="120" style="width:100%;font-family:monospace;font-size:12px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;`n    &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Menu Gallery - Ramen Jin Houston&quot;&gt;
+    &lt;title&gt;Menu Gallery | Ramen Jin&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/styles.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/cart-widget.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header id=&quot;main-header&quot;&gt;
+        &lt;nav class=&quot;navbar&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;
+                &lt;h1&gt;&lt;a href=&#x27;/&#x27;&gt;Ramen Jin&lt;/a&gt;&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;nav-links&quot;&gt;
+                &lt;li&gt;&lt;a href=&#x27;/&#x27;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class=&#x27;active&#x27; href=&#x27;/pages/menu&#x27;&gt;Menu&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/order&#x27;&gt;Order Online&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/location&#x27;&gt;Location&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/#about-preview&#x27;&gt;Our Story&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/admin&#x27;&gt;Sales Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/payment&#x27;&gt;Payment&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/admin&#x27;&gt;Receipts&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;page-content&quot;&gt;
+        &lt;section id=&quot;menu-gallery&quot;&gt;
+            &lt;h2&gt;Our Menu&lt;/h2&gt;
+            &lt;p class=&quot;section-subtitle&quot;&gt;Authentic Japanese Ramen &amp;amp; More&lt;/p&gt;
+
+            &lt;!-- Ramen Jin Menu --&gt;
+            &lt;div class=&quot;menu-section&quot;&gt;
+                &lt;h3&gt;Ramen Jin - Signature Ramen&lt;/h3&gt;
+                &lt;div class=&quot;menu-grid&quot;&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/tonkotsu-ramen.png&quot; alt=&quot;Tonkotsu Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Tonkotsu Ramen&lt;/h4&gt;
+                            &lt;p&gt;Rich, creamy pork bone broth simmered for 12 hours. Topped with chashu pork, soft-boiled egg, nori, green onions, and wood ear mushrooms.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$14.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/shoyu-ramen.png&quot; alt=&quot;Shoyu Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Shoyu Ramen&lt;/h4&gt;
+                            &lt;p&gt;Clear soy sauce based broth with chicken. Served with bamboo shoots, chashu, nori, and soft-boiled egg.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$13.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/miso-ramen.png&quot; alt=&quot;Miso Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Miso Ramen&lt;/h4&gt;
+                            &lt;p&gt;Hearty fermented soybean broth with sweet corn, butter, ground pork, and bean sprouts.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$14.49&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/spicy-tantan-ramen.png&quot; alt=&quot;Spicy Tan Tan Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Spicy Tan Tan Ramen&lt;/h4&gt;
+                            &lt;p&gt;Bold and spicy sesame-based broth with seasoned ground pork, bok choy, and chili oil.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$15.49&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/vegetable-ramen.png&quot; alt=&quot;Vegetable Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Vegetable Ramen&lt;/h4&gt;
+                            &lt;p&gt;Plant-based broth with seasonal vegetables, tofu, shiitake mushrooms, and crispy garlic.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$12.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/black-garlic-ramen.png&quot; alt=&quot;Black Garlic Ramen&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Black Garlic Ramen&lt;/h4&gt;
+                            &lt;p&gt;Tonkotsu base with black garlic oil, chashu, egg, nori, and crispy shallots.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$15.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Appetizers --&gt;
+            &lt;div class=&quot;menu-section&quot;&gt;
+                &lt;h3&gt;Appetizers &amp;amp; Sides&lt;/h3&gt;
+                &lt;div class=&quot;menu-grid&quot;&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/gyoza.png&quot; alt=&quot;Gyoza&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Gyoza (6 pcs)&lt;/h4&gt;
+                            &lt;p&gt;Pan-fried pork dumplings served with ponzu dipping sauce.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$7.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/chicken-karaage.png&quot; alt=&quot;Karaage&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Chicken Karaage&lt;/h4&gt;
+                            &lt;p&gt;Japanese fried chicken with spicy mayo and lemon.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$8.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;     &lt;/div&gt;
+                        &lt;div class=&quot;menu-card&quot;&gt;
+                &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/edamame.png&quot; alt=&quot;Edamame&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Edamame&lt;/h4&gt;
+                            &lt;p&gt;Steamed soybeans with sea salt.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$5.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/takoyaki.png&quot; alt=&quot;Takoyaki&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Takoyaki (6 pcs)&lt;/h4&gt;
+                            &lt;p&gt;Octopus balls with takoyaki sauce, mayo, and bonito flakes.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$8.49&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/tempura-fish-cake.png&quot; alt=&quot;Tempura Fish Cake&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Tempura Fish Cake&lt;/h4&gt;
+                            &lt;p&gt;Deep-fried fish cake with crispy seaweed tempura batter. Served with tentsuyu dipping sauce.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$7.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Drinks --&gt;
+            &lt;div class=&quot;menu-section&quot;&gt;
+                &lt;h3&gt;Beverages&lt;/h3&gt;
+                &lt;div class=&quot;menu-grid&quot;&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/green-tea.png&quot; alt=&quot;Japanese Green Tea&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Japanese Green Tea&lt;/h4&gt;
+                            &lt;p&gt;Hot or iced traditional green tea.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$2.99&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/ramune-soda.png&quot; alt=&quot;Ramune Soda&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Ramune Soda&lt;/h4&gt;
+                            &lt;p&gt;Classic Japanese marble soda in various flavors.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$3.49&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;menu-card&quot;&gt;
+                        &lt;div class=&quot;menu-image-container&quot;&gt;&lt;img src=&quot;../assets/images/menu/calpico.png&quot; alt=&quot;Calpico&quot; class=&quot;menu-img&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;menu-info&quot;&gt;
+                            &lt;h4&gt;Calpico&lt;/h4&gt;
+                            &lt;p&gt;Japanese yogurt drink, original or mango.&lt;/p&gt;
+                            &lt;span class=&quot;price&quot;&gt;$3.49&lt;/span&gt;
+                        &lt;button class=&quot;btn-add-to-order&quot; onclick=&quot;openQuantityModal(this)&quot;&gt;Add to Order&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer id=&quot;main-footer&quot;&gt;
+        &lt;div class=&quot;footer-bottom&quot;&gt;
+            &lt;p&gt;&amp;copy; 2026 Ramen Jin. All Rights Reserved. Owner: Brian Chen&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src=&quot;../assets/js/script.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Quantity Selection Modal --&gt;
+    &lt;div id=&quot;quantity-modal&quot; class=&quot;quantity-modal-overlay&quot; style=&quot;display:none;&quot;&gt;
+        &lt;div class=&quot;quantity-modal&quot;&gt;
+            &lt;button class=&quot;modal-close-btn&quot; onclick=&quot;closeQuantityModal()&quot;&gt;&amp;times;&lt;/button&gt;
+            &lt;h3 id=&quot;modal-item-name&quot;&gt;Item Name&lt;/h3&gt;
+            &lt;p id=&quot;modal-item-price&quot; class=&quot;modal-price&quot;&gt;$0.00&lt;/p&gt;
+            &lt;div class=&quot;modal-quantity-control&quot;&gt;
+                &lt;label for=&quot;modal-qty&quot;&gt;Quantity:&lt;/label&gt;
+                &lt;div class=&quot;quantity-selector&quot;&gt;
+                    &lt;button class=&quot;qty-btn&quot; onclick=&quot;adjustModalQty(-1)&quot;&gt;-&lt;/button&gt;
+                    &lt;input type=&quot;number&quot; id=&quot;modal-qty&quot; value=&quot;1&quot; min=&quot;1&quot; max=&quot;20&quot; class=&quot;qty-input&quot;&gt;
+                    &lt;button class=&quot;qty-btn&quot; onclick=&quot;adjustModalQty(1)&quot;&gt;+&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p id=&quot;modal-line-total&quot; class=&quot;modal-line-total&quot;&gt;Total: $0.00&lt;/p&gt;
+            &lt;button class=&quot;btn-primary btn-confirm-add&quot; onclick=&quot;confirmAddToOrder()&quot;&gt;Add to Order&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+    var currentItem = { name: &quot;&quot;, price: 0 };
+
+    function openQuantityModal(btn) {
+        var card = btn.closest(&quot;.menu-card&quot;);
+        var name = card.querySelector(&quot;h4&quot;).textContent;
+        var priceText = card.querySelector(&quot;.price&quot;).textContent;
+        var price = parseFloat(priceText.replace(&quot;$&quot;, &quot;&quot;));
+        currentItem = { name: name, price: price };
+        document.getElementById(&quot;modal-item-name&quot;).textContent = name;
+        document.getElementById(&quot;modal-item-price&quot;).textContent = priceText;
+        document.getElementById(&quot;modal-qty&quot;).value = 1;
+        document.getElementById(&quot;modal-line-total&quot;).textContent = &quot;Total: &quot; + priceText;
+        document.getElementById(&quot;quantity-modal&quot;).style.display = &quot;flex&quot;;
+    }
+
+    function closeQuantityModal() {
+        document.getElementById(&quot;quantity-modal&quot;).style.display = &quot;none&quot;;
+    }
+
+    function adjustModalQty(delta) {
+        var input = document.getElementById(&quot;modal-qty&quot;);
+        var val = parseInt(input.value) || 1;
+        val = Math.max(1, Math.min(20, val + delta));
+        input.value = val;
+        var total = (currentItem.price * val).toFixed(2);
+        document.getElementById(&quot;modal-line-total&quot;).textContent = &quot;Total: $&quot; + total;
+    }
+
+    document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        var qtyInput = document.getElementById(&quot;modal-qty&quot;);
+        if (qtyInput) {
+            qtyInput.addEventListener(&quot;input&quot;, function() {
+                var val = parseInt(this.value) || 1;
+                val = Math.max(1, Math.min(20, val));
+                this.value = val;
+                var total = (currentItem.price * val).toFixed(2);
+                document.getElementById(&quot;modal-line-total&quot;).textContent = &quot;Total: $&quot; + total;
+            });
+        }
+        var overlay = document.getElementById(&quot;quantity-modal&quot;);
+        if (overlay) {
+            overlay.addEventListener(&quot;click&quot;, function(e) {
+                if (e.target === this) closeQuantityModal();
+            });
+        }
+        var params = new URLSearchParams(window.location.search);
+        if (params.get(&quot;order&quot;) === &quot;true&quot;) {
+            var banner = document.createElement(&quot;div&quot;);
+            banner.className = &quot;order-mode-banner&quot;;
+            banner.innerHTML = &#x27;&lt;span&gt;&amp;#127836; Ordering Mode&lt;/span&gt; Select items below, then &lt;a href=&quot;/pages/order&quot; class=&quot;btn-back-to-order&quot;&gt;View Your Order &amp;rarr;&lt;/a&gt;&#x27;;
+            var main = document.querySelector(&quot;main&quot;) || document.querySelector(&quot;.menu-section&quot;);
+            if (main) main.insertBefore(banner, main.firstChild);
+        }
+    });
+
+    function confirmAddToOrder() {
+        var qty = parseInt(document.getElementById(&quot;modal-qty&quot;).value) || 1;
+        var item = { name: currentItem.name, price: currentItem.price, qty: qty };
+        var cart = JSON.parse(localStorage.getItem(&quot;ramenJinCart&quot;) || &quot;[]&quot;);
+        var found = false;
+        for (var i = 0; i &lt; cart.length; i++) {
+            if (cart[i].name === item.name) {
+                cart[i].qty += qty;
+                found = true;
+                break;
+            }
+        }
+        if (!found) cart.push(item);
+        localStorage.setItem(&quot;ramenJinCart&quot;, JSON.stringify(cart));
+        closeQuantityModal();
+        showOrderToast(item.name + &quot; (x&quot; + qty + &quot;) added to order!&quot;);
+            if (typeof CartWidget !== &#x27;undefined&#x27;) { CartWidget.show(item.name, qty); }
+    }
+
+    function showOrderToast(message) {
+        var toast = document.getElementById(&quot;order-toast&quot;);
+        if (!toast) {
+            toast = document.createElement(&quot;div&quot;);
+            toast.id = &quot;order-toast&quot;;
+            toast.className = &quot;order-toast&quot;;
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add(&quot;show&quot;);
+        setTimeout(function() { toast.classList.remove(&quot;show&quot;); }, 2500);
+    }
+    &lt;/script&gt;
+
+    &lt;script src=&quot;../assets/js/cart-widget.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</textarea>
+<hr>
+<h2>order.html (122 lines)</h2>
+<textarea id="order.html" rows="10" cols="120" style="width:100%;font-family:monospace;font-size:12px;">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;`n    &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Order Online - Ramen Jin Houston&quot;&gt;
+    &lt;title&gt;Order Online | Ramen Jin&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/styles.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/css/cart-widget.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header id=&quot;main-header&quot;&gt;
+        &lt;nav class=&quot;navbar&quot;&gt;
+            &lt;div class=&quot;logo&quot;&gt;
+                &lt;h1&gt;&lt;a href=&#x27;/&#x27;&gt;Ramen Jin&lt;/a&gt;&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;nav-links&quot;&gt;
+                &lt;li&gt;&lt;a href=&#x27;/&#x27;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/menu&#x27;&gt;Menu&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class=&#x27;active&#x27; href=&#x27;/pages/order&#x27;&gt;Order Online&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/location&#x27;&gt;Location&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/#about-preview&#x27;&gt;Our Story&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/admin&#x27;&gt;Sales Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/payment&#x27;&gt;Payment&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#x27;/pages/admin&#x27;&gt;Receipts&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;page-content&quot;&gt;
+        &lt;section id=&quot;order-system&quot;&gt;
+            &lt;h2&gt;Online Ordering System&lt;/h2&gt;
+            &lt;p&gt;Order your favorite ramen for pickup or delivery!&lt;/p&gt;
+
+            &lt;div class=&quot;order-container&quot;&gt;
+                &lt;!-- Order Type Selection --&gt;
+                &lt;div class=&quot;order-type&quot;&gt;
+                    &lt;h3&gt;Select Order Type&lt;/h3&gt;
+                    &lt;button class=&quot;btn-primary&quot; id=&quot;btn-pickup&quot;&gt;Pickup&lt;/button&gt;
+                    &lt;button class=&quot;btn-secondary&quot; id=&quot;btn-delivery&quot;&gt;Delivery&lt;/button&gt;
+                &lt;/div&gt;
+
+                        &lt;!-- Delivery Address Section --&gt;
+                        &lt;div id=&quot;delivery-address-section&quot; class=&quot;delivery-address-section&quot;&gt;
+                            &lt;h3&gt;Delivery Address&lt;/h3&gt;
+                            &lt;div class=&quot;address-form&quot;&gt;
+                                &lt;div class=&quot;form-group&quot;&gt;
+                                    &lt;label for=&quot;delivery-street&quot;&gt;Street Address&lt;/label&gt;
+                                    &lt;input type=&quot;text&quot; id=&quot;delivery-street&quot; class=&quot;address-input&quot; placeholder=&quot;123 Main Street&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;form-row&quot;&gt;
+                                    &lt;div class=&quot;form-group&quot;&gt;
+                                        &lt;label for=&quot;delivery-city&quot;&gt;City&lt;/label&gt;
+                                        &lt;input type=&quot;text&quot; id=&quot;delivery-city&quot; class=&quot;address-input&quot; placeholder=&quot;Houston&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;form-group&quot;&gt;
+                                        &lt;label for=&quot;delivery-zip&quot;&gt;ZIP Code&lt;/label&gt;
+                                        &lt;input type=&quot;text&quot; id=&quot;delivery-zip&quot; class=&quot;address-input&quot; placeholder=&quot;77001&quot;&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;form-group&quot;&gt;
+                                    &lt;label for=&quot;delivery-notes&quot;&gt;Delivery Notes (optional)&lt;/label&gt;
+                                    &lt;textarea id=&quot;delivery-notes&quot; class=&quot;address-input&quot; rows=&quot;2&quot; placeholder=&quot;Apartment number, gate code, etc.&quot;&gt;&lt;/textarea&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                &lt;!-- Restaurant Selection --&gt;
+                &lt;div class=&quot;restaurant-select&quot;&gt;
+                    &lt;h3&gt;Select Restaurant&lt;/h3&gt;
+                    &lt;div class=&quot;restaurant-options&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;restaurant&quot; value=&quot;ramen-jin&quot; checked&gt;
+                            Ramen Jin (Left Side)
+                        &lt;/label&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;restaurant&quot; value=&quot;banh-mi&quot;&gt;
+                            My Boss Banh Mi (Right Side)
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+            &lt;!-- Browse Menu Section --&gt;
+            &lt;div class=&quot;order-menu&quot;&gt;
+                &lt;h3&gt;Select Items&lt;/h3&gt;
+                &lt;p class=&quot;browse-menu-description&quot;&gt;Browse our complete menu to select your items. Choose from our full range of authentic ramen, sides, and drinks.&lt;/p&gt;
+                &lt;a href=&quot;/pages/menu?order=true&quot; class=&quot;btn-primary browse-menu-btn&quot; id=&quot;browse-menu-btn&quot;&gt;
+                    &lt;span class=&quot;browse-menu-icon&quot;&gt;&amp;#127836;&lt;/span&gt; Browse Our Full Menu
+                &lt;/a&gt;
+                &lt;div id=&quot;selected-items-container&quot; class=&quot;selected-items-container&quot;&gt;
+                    &lt;h4 id=&quot;selected-items-heading&quot; style=&quot;display:none;&quot;&gt;Your Selected Items&lt;/h4&gt;
+                    &lt;div id=&quot;cart-items-list&quot; class=&quot;cart-items-list&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+                &lt;!-- Order Summary --&gt;
+                &lt;div class=&quot;order-summary&quot;&gt;
+                    &lt;h3&gt;Order Summary&lt;/h3&gt;
+                    &lt;div id=&quot;summary-items&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;order-total&quot;&gt;
+                        &lt;p&gt;Subtotal: &lt;span id=&quot;subtotal&quot;&gt;$0.00&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;Tax (8.25%): &lt;span id=&quot;tax&quot;&gt;$0.00&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;Total: &lt;span id=&quot;total&quot;&gt;$0.00&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;button class=&quot;btn-primary&quot; id=&quot;btn-checkout&quot;&gt;Proceed to Checkout&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer id=&quot;main-footer&quot;&gt;
+        &lt;div class=&quot;footer-bottom&quot;&gt;
+            &lt;p&gt;&amp;copy; 2026 Ramen Jin. All Rights Reserved. Owner: Brian Chen&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src=&quot;../assets/js/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../assets/js/cart-widget.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</textarea>
+<hr>
+<h2>cart-widget.js (319 lines)</h2>
+<textarea id="cart-widget.js" rows="10" cols="120" style="width:100%;font-family:monospace;font-size:12px;">/* ============================================
+   Ramen Jin - Floating Cart Widget
+   Animated floating button &amp; pop-up panel
+   ============================================ */
+
+(function() {
+  &#x27;use strict&#x27;;
+
+  function getCart() {
+    return JSON.parse(localStorage.getItem(&#x27;ramenJinCart&#x27;) || &#x27;[]&#x27;);
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem(&#x27;ramenJinCart&#x27;, JSON.stringify(cart));
+  }
+
+  function getCartTotal() {
+    var cart = getCart();
+    var total = 0;
+    for (var i = 0; i &lt; cart.length; i++) {
+      total += cart[i].price * cart[i].qty;
+    }
+    return total;
+  }
+
+  function getCartCount() {
+    var cart = getCart();
+    var count = 0;
+    for (var i = 0; i &lt; cart.length; i++) {
+      count += cart[i].qty;
+    }
+    return count;
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement(&#x27;div&#x27;);
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function createWidgetHTML() {
+    var container = document.createElement(&#x27;div&#x27;);
+    container.id = &#x27;cart-widget-container&#x27;;
+
+    var btn = document.createElement(&#x27;button&#x27;);
+    btn.id = &#x27;cart-widget-btn&#x27;;
+    btn.setAttribute(&#x27;aria-label&#x27;, &#x27;View Cart&#x27;);
+    btn.innerHTML = &#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;9&quot; cy=&quot;21&quot; r=&quot;1&quot;/&gt;&lt;circle cx=&quot;20&quot; cy=&quot;21&quot; r=&quot;1&quot;/&gt;&lt;path d=&quot;M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6&quot;/&gt;&lt;/svg&gt;&#x27;;
+
+    var badge = document.createElement(&#x27;span&#x27;);
+    badge.id = &#x27;cart-widget-badge&#x27;;
+    badge.className = &#x27;hidden&#x27;;
+    badge.textContent = &#x27;0&#x27;;
+    btn.appendChild(badge);
+    container.appendChild(btn);
+
+    var panel = document.createElement(&#x27;div&#x27;);
+    panel.id = &#x27;cart-widget-panel&#x27;;
+    panel.className = &#x27;cart-widget-panel-hidden&#x27;;
+
+    var header = document.createElement(&#x27;div&#x27;);
+    header.className = &#x27;cart-widget-header&#x27;;
+    header.innerHTML = &#x27;&lt;h3 class=&quot;cart-widget-title&quot;&gt;\ud83c\udf5c Your Order&lt;/h3&gt;&lt;button id=&quot;cart-widget-close&quot; class=&quot;cart-widget-close-btn&quot; aria-label=&quot;Close&quot;&gt;&amp;times;&lt;/button&gt;&#x27;;
+    panel.appendChild(header);
+
+    var itemsList = document.createElement(&#x27;div&#x27;);
+    itemsList.id = &#x27;cart-widget-items&#x27;;
+    itemsList.className = &#x27;cart-widget-items&#x27;;
+    panel.appendChild(itemsList);
+
+    var footer = document.createElement(&#x27;div&#x27;);
+    footer.className = &#x27;cart-widget-footer&#x27;;
+
+    var totalRow = document.createElement(&#x27;div&#x27;);
+    totalRow.className = &#x27;cart-widget-total&#x27;;
+    totalRow.innerHTML = &#x27;&lt;span&gt;Subtotal:&lt;/span&gt;&lt;span id=&quot;cart-widget-subtotal&quot;&gt;$0.00&lt;/span&gt;&#x27;;
+    footer.appendChild(totalRow);
+
+    var actions = document.createElement(&#x27;div&#x27;);
+    actions.className = &#x27;cart-widget-actions&#x27;;
+
+    var viewBtn = document.createElement(&#x27;a&#x27;);
+    viewBtn.id = &#x27;cart-widget-view-btn&#x27;;
+    viewBtn.href = &#x27;order.html&#x27;;
+    viewBtn.className = &#x27;cart-widget-action-btn cart-widget-view&#x27;;
+    viewBtn.innerHTML = &#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;path d=&quot;M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;/&gt;&lt;/svg&gt; View Selected Items&#x27;;
+
+    var checkoutBtn = document.createElement(&#x27;a&#x27;);
+    checkoutBtn.id = &#x27;cart-widget-checkout-btn&#x27;;
+    checkoutBtn.href = &#x27;payment.html&#x27;;
+    checkoutBtn.className = &#x27;cart-widget-action-btn cart-widget-checkout&#x27;;
+    checkoutBtn.innerHTML = &#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;rect x=&quot;1&quot; y=&quot;4&quot; width=&quot;22&quot; height=&quot;16&quot; rx=&quot;2&quot; ry=&quot;2&quot;/&gt;&lt;line x1=&quot;1&quot; y1=&quot;10&quot; x2=&quot;23&quot; y2=&quot;10&quot;/&gt;&lt;/svg&gt; Go to Cart / Checkout&#x27;;
+
+    actions.appendChild(viewBtn);
+    actions.appendChild(checkoutBtn);
+    footer.appendChild(actions);
+    panel.appendChild(footer);
+
+    var emptyState = document.createElement(&#x27;div&#x27;);
+    emptyState.id = &#x27;cart-widget-empty&#x27;;
+    emptyState.className = &#x27;cart-widget-empty&#x27;;
+    emptyState.innerHTML = &#x27;&lt;p&gt;Your cart is empty&lt;/p&gt;&lt;p style=&quot;font-size:12px;color:#888;&quot;&gt;Add some delicious ramen!&lt;/p&gt;&#x27;;
+    panel.appendChild(emptyState);
+
+    container.appendChild(panel);
+
+    var toast = document.createElement(&#x27;div&#x27;);
+    toast.id = &#x27;cart-widget-toast&#x27;;
+    toast.className = &#x27;cart-widget-toast&#x27;;
+    container.appendChild(toast);
+
+    return container;
+  }
+
+  function renderWidgetItems() {
+    var cart = getCart();
+    var itemsEl = document.getElementById(&#x27;cart-widget-items&#x27;);
+    var emptyEl = document.getElementById(&#x27;cart-widget-empty&#x27;);
+    var subtotalEl = document.getElementById(&#x27;cart-widget-subtotal&#x27;);
+    var footerActions = document.querySelector(&#x27;.cart-widget-actions&#x27;);
+    var totalRow = document.querySelector(&#x27;.cart-widget-total&#x27;);
+
+    if (!itemsEl) return;
+
+    if (cart.length === 0) {
+      itemsEl.style.display = &#x27;none&#x27;;
+      if (emptyEl) emptyEl.style.display = &#x27;flex&#x27;;
+      if (footerActions) footerActions.style.display = &#x27;none&#x27;;
+      if (totalRow) totalRow.style.display = &#x27;none&#x27;;
+      if (subtotalEl) subtotalEl.textContent = &#x27;$0.00&#x27;;
+      return;
+    }
+
+    itemsEl.style.display = &#x27;block&#x27;;
+    if (emptyEl) emptyEl.style.display = &#x27;none&#x27;;
+    if (footerActions) footerActions.style.display = &#x27;flex&#x27;;
+    if (totalRow) totalRow.style.display = &#x27;flex&#x27;;
+
+    var html = &#x27;&#x27;;
+    for (var i = 0; i &lt; cart.length; i++) {
+      var item = cart[i];
+      html += &#x27;&lt;div class=&quot;cart-widget-item&quot; data-index=&quot;&#x27; + i + &#x27;&quot;&gt;&#x27; +
+        &#x27;&lt;div class=&quot;cart-widget-item-info&quot;&gt;&#x27; +
+          &#x27;&lt;div class=&quot;cart-widget-item-name&quot;&gt;&#x27; + escapeHtml(item.name) + &#x27;&lt;/div&gt;&#x27; +
+          &#x27;&lt;div class=&quot;cart-widget-item-details&quot;&gt;&#x27; +
+            &#x27;&lt;span class=&quot;cart-widget-item-qty&quot;&gt;Qty: &#x27; + item.qty + &#x27;&lt;/span&gt; &amp;middot; &#x27; +
+            &#x27;&lt;span class=&quot;cart-widget-item-price&quot;&gt;$&#x27; + (item.price * item.qty).toFixed(2) + &#x27;&lt;/span&gt;&#x27; +
+          &#x27;&lt;/div&gt;&#x27; +
+        &#x27;&lt;/div&gt;&#x27; +
+        &#x27;&lt;button class=&quot;cart-widget-remove-btn&quot; data-index=&quot;&#x27; + i + &#x27;&quot; aria-label=&quot;Remove&quot;&gt;&#x27; +
+          &#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;/&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;/&gt;&lt;/svg&gt;&#x27; +
+        &#x27;&lt;/button&gt;&#x27; +
+      &#x27;&lt;/div&gt;&#x27;;
+    }
+    itemsEl.innerHTML = html;
+
+    if (subtotalEl) {
+      subtotalEl.textContent = &#x27;$&#x27; + getCartTotal().toFixed(2);
+    }
+
+    var removeBtns = itemsEl.querySelectorAll(&#x27;.cart-widget-remove-btn&#x27;);
+    for (var j = 0; j &lt; removeBtns.length; j++) {
+      removeBtns[j].addEventListener(&#x27;click&#x27;, function(e) {
+        e.stopPropagation();
+        var idx = parseInt(this.getAttribute(&#x27;data-index&#x27;));
+        removeWidgetItem(idx);
+      });
+    }
+  }
+
+  function removeWidgetItem(index) {
+    var cart = getCart();
+    if (index &gt;= 0 &amp;&amp; index &lt; cart.length) {
+      cart.splice(index, 1);
+      saveCart(cart);
+      renderWidgetItems();
+      updateBadge();
+      if (typeof window.renderCart === &#x27;function&#x27;) {
+        window.renderCart();
+      }
+    }
+  }
+
+  function updateBadge() {
+    var badge = document.getElementById(&#x27;cart-widget-badge&#x27;);
+    var btn = document.getElementById(&#x27;cart-widget-btn&#x27;);
+    if (!badge) return;
+
+    var count = getCartCount();
+    badge.textContent = count;
+
+    if (count &gt; 0) {
+      badge.classList.remove(&#x27;hidden&#x27;);
+      if (btn) btn.style.display = &#x27;flex&#x27;;
+    } else {
+      badge.classList.add(&#x27;hidden&#x27;);
+    }
+  }
+
+  var panelOpen = false;
+
+  function togglePanel() {
+    if (panelOpen) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  }
+
+  function openPanel() {
+    var panel = document.getElementById(&#x27;cart-widget-panel&#x27;);
+    if (!panel) return;
+    renderWidgetItems();
+    panel.classList.remove(&#x27;cart-widget-panel-hidden&#x27;);
+    panel.classList.add(&#x27;cart-widget-panel-visible&#x27;);
+        panel.classList.add(&#x27;open&#x27;);
+    panelOpen = true;
+  }
+
+  function closePanel() {
+    var panel = document.getElementById(&#x27;cart-widget-panel&#x27;);
+    if (!panel) return;
+    panel.classList.remove(&#x27;cart-widget-panel-visible&#x27;);
+    panel.classList.add(&#x27;cart-widget-panel-hidden&#x27;);
+        panel.classList.remove(&#x27;open&#x27;);
+    panelOpen = false;
+  }
+
+  function showWidgetToast(itemName, qty) {
+    var toast = document.getElementById(&#x27;cart-widget-toast&#x27;);
+    if (!toast) return;
+
+    toast.innerHTML = &#x27;&lt;div class=&quot;cart-widget-toast-icon&quot;&gt;&#x27; +
+      &#x27;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;#4ade80&quot; stroke-width=&quot;3&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;&#x27; +
+      &#x27;&lt;/div&gt;&#x27; +
+      &#x27;&lt;div class=&quot;cart-widget-toast-text&quot;&gt;&#x27; +
+        &#x27;&lt;strong&gt;&#x27; + escapeHtml(itemName) + &#x27;&lt;/strong&gt;&#x27; +
+        &#x27;&lt;span&gt; (x&#x27; + qty + &#x27;) added!&lt;/span&gt;&#x27; +
+      &#x27;&lt;/div&gt;&#x27;;
+
+    toast.classList.add(&#x27;cart-widget-toast-show&#x27;);
+
+    var btn = document.getElementById(&#x27;cart-widget-btn&#x27;);
+    if (btn) {
+      btn.classList.add(&#x27;pulse&#x27;);
+      setTimeout(function() { btn.classList.remove(&#x27;pulse&#x27;); }, 600);
+    }
+
+    setTimeout(function() {
+      openPanel();
+    }, 400);
+
+    setTimeout(function() {
+      toast.classList.remove(&#x27;cart-widget-toast-show&#x27;);
+    }, 3000);
+  }
+
+  function initCartWidget() {
+    var path = window.location.pathname;
+    if (path.indexOf(&#x27;payment.html&#x27;) &gt; -1 || path.indexOf(&#x27;receipt.html&#x27;) &gt; -1) return;
+
+    var widget = createWidgetHTML();
+    document.body.appendChild(widget);
+
+    var btn = document.getElementById(&#x27;cart-widget-btn&#x27;);
+    if (btn) {
+      btn.addEventListener(&#x27;click&#x27;, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        togglePanel();
+      });
+    }
+
+    var closeBtn = document.getElementById(&#x27;cart-widget-close&#x27;);
+    if (closeBtn) {
+      closeBtn.addEventListener(&#x27;click&#x27;, function(e) {
+        e.preventDefault();
+        closePanel();
+      });
+    }
+
+    document.addEventListener(&#x27;click&#x27;, function(e) {
+      var panel = document.getElementById(&#x27;cart-widget-panel&#x27;);
+      var btn = document.getElementById(&#x27;cart-widget-btn&#x27;);
+      if (panelOpen &amp;&amp; panel &amp;&amp; btn) {
+        if (!panel.contains(e.target) &amp;&amp; !btn.contains(e.target)) {
+          closePanel();
+        }
+      }
+    });
+
+    updateBadge();
+
+    if (getCartCount() &gt; 0 &amp;&amp; btn) {
+      btn.style.display = &#x27;flex&#x27;;
+    }
+  }
+
+  window.CartWidget = {
+    update: function() {
+      updateBadge();
+      renderWidgetItems();
+    },
+    show: function(itemName, qty) {
+      updateBadge();
+      showWidgetToast(itemName, qty);
+    },
+    openPanel: openPanel,
+    closePanel: closePanel,
+    toggle: togglePanel
+  };
+
+  if (document.readyState === &#x27;loading&#x27;) {
+    document.addEventListener(&#x27;DOMContentLoaded&#x27;, initCartWidget);
+  } else {
+    initCartWidget();
+  }
+
+})();
+</textarea>
+<hr>
+<h2>cart-widget.css (545 lines)</h2>
+<textarea id="cart-widget.css" rows="10" cols="120" style="width:100%;font-family:monospace;font-size:12px;">/* ============================================
+Ramen Jin - Floating Cart Widget Styles
+============================================ */
+
+/* Floating Cart Button */
+#cart-widget-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4a24e, #c4872e);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+#cart-widget-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+#cart-widget-btn:active {
+  transform: scale(0.95);
+}
+
+/* Cart Icon SVG */
+#cart-widget-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* Item Count Badge */
+#cart-widget-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart-widget-badge.hidden {
+  display: none;
+}
+
+/* Cart Summary Panel */
+#cart-widget-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 9998;
+  width: 340px;
+  max-height: 420px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+  animation: cartPanelSlideIn 0.3s ease;
+}
+
+#cart-widget-panel.open {
+  display: flex;
+}
+
+@keyframes cartPanelSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Panel Header */
+.cart-widget-header {
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #d4a24e, #c4872e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.cart-widget-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cart-widget-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.cart-widget-close:hover {
+  opacity: 1;
+}
+
+/* Panel Items List */
+.cart-widget-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 18px;
+  max-height: 240px;
+}
+
+.cart-widget-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-widget-items::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.cart-widget-empty {
+  color: #999;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+
+.cart-widget-empty svg {
+  width: 40px;
+  height: 40px;
+  fill: #555;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual Cart Item */
+.cart-widget-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.cart-widget-item:last-child {
+  border-bottom: none;
+}
+
+.cart-widget-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-widget-item-name {
+  color: #eee;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.cart-widget-item-details {
+  color: #999;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.cart-widget-item-price {
+  color: #d4a24e;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+/* Panel Footer */
+.cart-widget-footer {
+  padding: 14px 18px;
+  border-top: 1px solid #333;
+  background: #1a1a1a;
+  flex-shrink: 0;
+}
+
+.cart-widget-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-widget-total-amount {
+  color: #d4a24e;
+  font-size: 18px;
+}
+
+.cart-widget-order-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #d4a24e, #c4872e);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
+}
+
+.cart-widget-order-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.cart-widget-order-btn:active {
+  transform: translateY(0);
+}
+
+/* Pulse animation when item added */
+@keyframes cartPulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.25); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+#cart-widget-btn.pulse {
+  animation: cartPulse 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #cart-widget-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+
+  #cart-widget-panel {
+    right: 10px;
+    left: 10px;
+    bottom: 85px;
+    width: auto;
+  }
+
+  .cart-widget-item-name {
+    max-width: 140px;
+  }
+}
+
+
+/* Toast Notification */
+.cart-widget-toast {
+  position: fixed;
+  bottom: 140px;
+  right: 30px;
+  z-index: 10000;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 4px solid #4ade80;
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  max-width: 340px;
+}
+
+.cart-widget-toast-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.cart-widget-toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(74, 222, 128, 0.15);
+  border-radius: 50%;
+}
+
+.cart-widget-toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart-widget-toast-text strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.cart-widget-toast-text span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* Widget Header */
+.cart-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #1a1a1a, #222);
+}
+
+.cart-widget-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-widget-close-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.cart-widget-close-btn:hover {
+  color: #ff4444;
+  transform: scale(1.2);
+}
+
+/* Widget Items Container */
+.cart-widget-items {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.cart-widget-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cart-widget-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cart-widget-items::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 2px;
+}
+
+/* Remove Button */
+.cart-widget-remove-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.cart-widget-remove-btn:hover {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+/* Footer */
+.cart-widget-footer {
+  border-top: 1px solid #333;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #1a1a1a, #222);
+}
+
+.cart-widget-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cart-widget-total span:last-child {
+  color: #c8102e;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.cart-widget-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-widget-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+  text-align: center;
+}
+
+.cart-widget-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cart-widget-view {
+  background: transparent;
+  border: 1px solid #555 !important;
+  color: #ddd;
+}
+
+.cart-widget-view:hover {
+  border-color: #888 !important;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cart-widget-checkout {
+  background: linear-gradient(135deg, #c8102e, #e8192e);
+  color: #fff;
+}
+
+.cart-widget-checkout:hover {
+  background: linear-gradient(135deg, #d4203a, #f02040);
+}
+
+/* Empty State */
+.cart-widget-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.cart-widget-empty p:first-child {
+  font-size: 15px;
+  margin: 0 0 4px 0;
+  color: #999;
+}
+
+/* Panel slide animations */
+.cart-widget-panel-hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cart-widget-panel-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  visibility: visible;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Responsive toast */
+@media (max-width: 480px) {
+  .cart-widget-toast {
+    right: 10px;
+    bottom: 120px;
+    left: 10px;
+    max-width: none;
+  }
+  .cart-widget-actions {
+    flex-direction: column;
+  }
+}
+</textarea>
+<hr>
+</body></html>

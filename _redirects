@@ -1,0 +1,11 @@
+# Netlify redirects - handle clean URLs
+/pages/menu    /pages/menu.html    200
+/pages/order   /pages/order.html   200
+/pages/location /pages/location.html 200
+/pages/payment /pages/payment.html 200
+/pages/admin   /pages/admin.html   200
+/pages/receipt /pages/receipt.html 200
+/pages/receipts /pages/receipts.html 200
+/pages/our-story /pages/our-story.html 200
+/pages/sales   /pages/sales.html   200
+/pages/sales-dashboard /pages/sales-dashboard.html 200

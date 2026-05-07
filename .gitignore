@@ -1,0 +1,6 @@
+# Local Netlify folder
+.netlify
+/server/*
+node_modules/
+.env
+assets/videos/originals/4253322-uhd_2160_4096_25fps.mp4

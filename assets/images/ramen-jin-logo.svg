@@ -1,0 +1,61 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="bowlGrad" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" style="stop-color:#D4382C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B1A1A;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="noodleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brothGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A050;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B6914;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#D4382C" stroke-width="3"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#D4382C" stroke-width="1.5"/>
+  <circle cx="100" cy="18" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="118" cy="19" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="82" cy="19" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="135" cy="24" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="65" cy="24" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="150" cy="32" r="2" fill="#D4382C" opacity="0.6"/>
+  <circle cx="50" cy="32" r="2" fill="#D4382C" opacity="0.6"/>
+  <path d="M70 72 Q72 60 68 50 Q64 40 68 30" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.5">
+    <animate attributeName="d" dur="3s" repeatCount="indefinite" values="M70 72 Q72 60 68 50 Q64 40 68 30;M70 72 Q66 60 70 50 Q74 40 70 30;M70 72 Q72 60 68 50 Q64 40 68 30"/>
+    <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.5;0.3;0.5"/>
+  </path>
+  <path d="M100 68 Q104 55 98 45 Q92 35 98 25" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+    <animate attributeName="d" dur="2.5s" repeatCount="indefinite" values="M100 68 Q104 55 98 45 Q92 35 98 25;M100 68 Q96 55 102 45 Q108 35 102 25;M100 68 Q104 55 98 45 Q92 35 98 25"/>
+    <animate attributeName="opacity" dur="2.5s" repeatCount="indefinite" values="0.6;0.3;0.6"/>
+  </path>
+  <path d="M130 72 Q132 60 128 50 Q124 40 128 30" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.5">
+    <animate attributeName="d" dur="3.5s" repeatCount="indefinite" values="M130 72 Q132 60 128 50 Q124 40 128 30;M130 72 Q126 60 130 50 Q134 40 130 30;M130 72 Q132 60 128 50 Q124 40 128 30"/>
+    <animate attributeName="opacity" dur="3.5s" repeatCount="indefinite" values="0.5;0.2;0.5"/>
+  </path>
+  <ellipse cx="100" cy="78" rx="58" ry="12" fill="#D4382C"/>
+  <path d="M42 78 Q45 130 100 135 Q155 130 158 78 Z" fill="url(#bowlGrad)"/>
+  <ellipse cx="100" cy="78" rx="56" ry="10" fill="none" stroke="#FF6B5A" stroke-width="1" opacity="0.5"/>
+  <path d="M50 95 Q56 90 62 95 Q68 100 74 95 Q80 90 86 95 Q92 100 98 95 Q104 90 110 95 Q116 100 122 95 Q128 90 134 95 Q140 100 146 95 Q152 90 155 93" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.7"/>
+  <path d="M52 102 Q58 97 64 102 Q70 107 76 102 Q82 97 88 102 Q94 107 100 102 Q106 97 112 102 Q118 107 124 102 Q130 97 136 102 Q142 107 148 102 Q153 98 155 100" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="100" cy="80" rx="52" ry="8" fill="url(#brothGrad)" opacity="0.6"/>
+  <path d="M70 80 Q75 90 80 80 Q85 70 90 82 Q95 92 100 80" fill="none" stroke="url(#noodleGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M85 78 Q90 88 95 78 Q100 68 105 80 Q110 90 115 78" fill="none" stroke="url(#noodleGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M100 80 Q105 90 110 80 Q115 70 120 82 Q125 90 130 78" fill="none" stroke="url(#noodleGrad)" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="78" cy="76" rx="8" ry="6" fill="#FFFFFF"/>
+  <ellipse cx="78" cy="76" rx="5" ry="3.5" fill="#FFD700"/>
+  <circle cx="115" cy="76" r="7" fill="#FFFFFF"/>
+  <circle cx="115" cy="76" r="5" fill="#FFB6C1"/>
+  <path d="M115 71 Q118 74 115 76 Q112 78 115 81" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  <ellipse cx="95" cy="74" rx="4" ry="2.5" fill="#2E8B2E" opacity="0.9"/>
+  <ellipse cx="105" cy="73" rx="3" ry="2" fill="#3CB043" opacity="0.8"/>
+  <ellipse cx="88" cy="76" rx="3" ry="1.8" fill="#2E8B2E" opacity="0.7"/>
+  <line x1="130" y1="55" x2="80" y2="95" stroke="#8B7355" stroke-width="3" stroke-linecap="round"/>
+  <line x1="137" y1="55" x2="87" y2="95" stroke="#A0896C" stroke-width="3" stroke-linecap="round"/>
+  <text x="100" y="122" text-anchor="middle" font-family="serif" font-size="16" fill="#FFD700" font-weight="bold" opacity="0.8">&#40618;</text>
+  <rect x="30" y="145" rx="3" ry="3" width="140" height="28" fill="#D4382C" opacity="0.9"/>
+  <rect x="32" y="147" rx="2" ry="2" width="136" height="24" fill="none" stroke="#FFD700" stroke-width="0.8" opacity="0.7"/>
+  <text x="100" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#FFFFFF" font-weight="bold" letter-spacing="3">RAMEN JIN</text>
+  <text x="100" y="182" text-anchor="middle" font-family="serif" font-size="11" fill="#D4382C" font-weight="bold">&#12521;&#12540;&#12513;&#12531;&#12539;&#12472;&#12531;</text>
+</svg>

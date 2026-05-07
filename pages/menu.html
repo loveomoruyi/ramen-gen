@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>`n    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu Gallery - Ramen Jin Houston">
+    <title>Menu Gallery | Ramen Jin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/cart-widget.css">
+    <link rel="stylesheet" href="../assets/css/ux-enhancements.css">
+    <link rel="stylesheet" href="../assets/css/visual-polish.css">
+    <link rel="stylesheet" href="../assets/css/site-fixes.css">
+</head>
+<body class="menu-page">
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href='/'>Ramen Jin</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href='/'>Home</a></li>
+                <li><a class='active' href='/pages/menu.html'>Menu</a></li>
+                <li><a href='/pages/order.html'>Order Online</a></li>
+                <li><a href='/pages/location.html'>Location</a></li>
+                <li><a href='/#about-preview'>Our Story</a></li>
+                <li><a href='/pages/admin.html'>Sales Dashboard</a></li>
+                <li><a href='/pages/payment.html'>Payment</a></li>
+                <li><a href='/pages/admin.html'>Receipts</a></li>
+                <li><a href='#' id='nav-cart-link' class='nav-cart-tab' onclick='event.preventDefault(); if(typeof CartWidget!=="undefined") CartWidget.toggle();'>Cart <span id='nav-cart-badge' class='nav-cart-badge'></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section id="menu-gallery">
+            <h2>Our Menu</h2>
+            <p class="section-subtitle">Authentic Japanese Ramen &amp; More</p>
+
+            <!-- Ramen Jin Menu -->
+            <div class="menu-section">
+                <h3>Ramen Jin - Signature Ramen</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/tonkotsu-ramen.png" alt="Tonkotsu Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Tonkotsu Ramen</h4>
+                            <p>Rich, creamy pork bone broth simmered for 12 hours. Topped with chashu pork, soft-boiled egg, nori, green onions, and wood ear mushrooms.</p>
+                            <span class="price">$14.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/shoyu-ramen.png" alt="Shoyu Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Shoyu Ramen</h4>
+                            <p>Clear soy sauce based broth with chicken. Served with bamboo shoots, chashu, nori, and soft-boiled egg.</p>
+                            <span class="price">$13.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/miso-ramen.png" alt="Miso Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Miso Ramen</h4>
+                            <p>Hearty fermented soybean broth with sweet corn, butter, ground pork, and bean sprouts.</p>
+                            <span class="price">$14.49</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/spicy-tantan-ramen.png" alt="Spicy Tan Tan Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Spicy Tan Tan Ramen</h4>
+                            <p>Bold and spicy sesame-based broth with seasoned ground pork, bok choy, and chili oil.</p>
+                            <span class="price">$15.49</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/vegetable-ramen.png" alt="Vegetable Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Vegetable Ramen</h4>
+                            <p>Plant-based broth with seasonal vegetables, tofu, shiitake mushrooms, and crispy garlic.</p>
+                            <span class="price">$12.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/black-garlic-ramen.png" alt="Black Garlic Ramen" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Black Garlic Ramen</h4>
+                            <p>Tonkotsu base with black garlic oil, chashu, egg, nori, and crispy shallots.</p>
+                            <span class="price">$15.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appetizers -->
+            <div class="menu-section">
+                <h3>Appetizers &amp; Sides</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/gyoza.png" alt="Gyoza" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Gyoza (6 pcs)</h4>
+                            <p>Pan-fried pork dumplings served with ponzu dipping sauce.</p>
+                            <span class="price">$7.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/chicken-karaage.png" alt="Karaage" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Chicken Karaage</h4>
+                            <p>Japanese fried chicken with spicy mayo and lemon.</p>
+                            <span class="price">$8.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    <     </div>
+                        <div class="menu-card">
+                <div class="menu-image-container"><img src="../assets/images/menu/edamame.png" alt="Edamame" class="menu-img"></div>
+                <div class="menu-info">
+                            <h4>Edamame</h4>
+                            <p>Steamed soybeans with sea salt.</p>
+                            <span class="price">$5.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/takoyaki.png" alt="Takoyaki" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Takoyaki (6 pcs)</h4>
+                            <p>Octopus balls with takoyaki sauce, mayo, and bonito flakes.</p>
+                            <span class="price">$8.49</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/tempura-fish-cake.png" alt="Tempura Fish Cake" class="menu-img"></div>
+                        <div class="menu-info">
+                            <h4>Tempura Fish Cake</h4>
+                            <p>Deep-fried fish cake with crispy seaweed tempura batter. Served with tentsuyu dipping sauce.</p>
+                            <span class="price">$7.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+            </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-section">
+                <h3>Beverages</h3>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/green-tea.png" alt="Japanese Green Tea" class="menu-img"></div>
+                <div class="menu-info">
+                            <h4>Japanese Green Tea</h4>
+                            <p>Hot or iced traditional green tea.</p>
+                            <span class="price">$2.99</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/ramune-soda.png" alt="Ramune Soda" class="menu-img"></div>
+                <div class="menu-info">
+                            <h4>Ramune Soda</h4>
+                            <p>Classic Japanese marble soda in various flavors.</p>
+                            <span class="price">$3.49</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-image-container"><img src="../assets/images/menu/calpico.png" alt="Calpico" class="menu-img"></div>
+                <div class="menu-info">
+                            <h4>Calpico</h4>
+                            <p>Japanese yogurt drink, original or mango.</p>
+                            <span class="price">$3.49</span>
+                        <button class="btn-add-to-order" onclick="openQuantityModal(this)">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ramen Jin. All Rights Reserved. Owner: Brian Chen</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+    <!-- Quantity Selection Modal -->
+    <div id="quantity-modal" class="quantity-modal-overlay" style="display:none;">
+        <div class="quantity-modal">
+            <button class="modal-close-btn" onclick="closeQuantityModal()">&times;</button>
+            <h3 id="modal-item-name">Item Name</h3>
+            <p id="modal-item-price" class="modal-price">$0.00</p>
+            <div class="modal-quantity-control">
+                <label for="modal-qty">Quantity:</label>
+                <div class="quantity-selector">
+                    <button class="qty-btn" onclick="adjustModalQty(-1)">-</button>
+                    <input type="number" id="modal-qty" value="1" min="1" max="20" class="qty-input">
+                    <button class="qty-btn" onclick="adjustModalQty(1)">+</button>
+                </div>
+            </div>
+            <p id="modal-line-total" class="modal-line-total">Total: $0.00</p>
+            <button class="btn-primary btn-confirm-add" onclick="confirmAddToOrder()">Add to Order</button>
+        </div>
+    </div>
+
+    <script>
+    var currentItem = { name: "", price: 0 };
+
+    function openQuantityModal(btn) {
+        var card = btn.closest(".menu-card");
+        var name = card.querySelector("h4").textContent;
+        var priceText = card.querySelector(".price").textContent;
+        var price = parseFloat(priceText.replace("$", ""));
+        currentItem = { name: name, price: price };
+        document.getElementById("modal-item-name").textContent = name;
+        document.getElementById("modal-item-price").textContent = priceText;
+        document.getElementById("modal-qty").value = 1;
+        document.getElementById("modal-line-total").textContent = "Total: " + priceText;
+        document.getElementById("quantity-modal").style.display = "flex";
+    }
+
+    function closeQuantityModal() {
+        document.getElementById("quantity-modal").style.display = "none";
+    }
+
+    function adjustModalQty(delta) {
+        var input = document.getElementById("modal-qty");
+        var val = parseInt(input.value) || 1;
+        val = Math.max(1, Math.min(20, val + delta));
+        input.value = val;
+        var total = (currentItem.price * val).toFixed(2);
+        document.getElementById("modal-line-total").textContent = "Total: $" + total;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var qtyInput = document.getElementById("modal-qty");
+        if (qtyInput) {
+            qtyInput.addEventListener("input", function() {
+                var val = parseInt(this.value) || 1;
+                val = Math.max(1, Math.min(20, val));
+                this.value = val;
+                var total = (currentItem.price * val).toFixed(2);
+                document.getElementById("modal-line-total").textContent = "Total: $" + total;
+            });
+        }
+        var overlay = document.getElementById("quantity-modal");
+        if (overlay) {
+            overlay.addEventListener("click", function(e) {
+                if (e.target === this) closeQuantityModal();
+            });
+        }
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("order") === "true") {
+            var banner = document.createElement("div");
+            banner.className = "order-mode-banner";
+            banner.innerHTML = '<span>&#127836; Ordering Mode</span> Select items below, then <a href="/pages/order.html" class="btn-back-to-order">View Your Order &rarr;</a>';
+            var main = document.querySelector("main") || document.querySelector(".menu-section");
+            if (main) main.insertBefore(banner, main.firstChild);
+        }
+    });
+
+    function confirmAddToOrder() {
+        var qty = parseInt(document.getElementById("modal-qty").value) || 1;
+        var item = { name: currentItem.name, price: currentItem.price, qty: qty };
+        var cart = JSON.parse(localStorage.getItem("ramenJinCart") || "[]");
+        var found = false;
+        for (var i = 0; i < cart.length; i++) {
+            if (cart[i].name === item.name) {
+                cart[i].qty += qty;
+                found = true;
+                break;
+            }
+        }
+        if (!found) cart.push(item);
+        localStorage.setItem("ramenJinCart", JSON.stringify(cart));
+        closeQuantityModal();
+        showOrderToast(item.name + " (x" + qty + ") added to order!");
+            if (typeof CartWidget !== 'undefined') { CartWidget.show(item.name, qty); }
+    }
+
+    function showOrderToast(message) {
+        var toast = document.getElementById("order-toast");
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "order-toast";
+            toast.className = "order-toast";
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.classList.add("show");
+        setTimeout(function() { toast.classList.remove("show"); }, 2500);
+    }
+    </script>
+
+    <script src="../assets/js/cart-widget.js"></script>
+
+<script>
+// Move quantity modal to documentElement so position:fixed works
+// regardless of body transforms
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('quantity-modal');
+    if (modal) {
+        document.documentElement.appendChild(modal);
+    }
+});
+</script>
+</body>
+</html>
+
