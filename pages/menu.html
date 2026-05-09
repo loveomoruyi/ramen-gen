@@ -267,7 +267,7 @@
         if (params.get("order") === "true") {
             var banner = document.createElement("div");
             banner.className = "order-mode-banner";
-            banner.innerHTML = '<span>&#127836; Ordering Mode</span> Select items below, then <a href="/pages/order.html" class="btn-back-to-order">View Your Order &rarr;</a>';
+            banner.innerHTML = '<span>&#127836; Ordering Mode</span> Select items below, then <a href="order.html" class="btn-back-to-order">View Your Order &rarr;</a>';
             var main = document.querySelector("main") || document.querySelector(".menu-section");
             if (main) main.insertBefore(banner, main.firstChild);
         }
